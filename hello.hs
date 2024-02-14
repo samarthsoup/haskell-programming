@@ -1,2 +1,7 @@
-mul arg1 arg2 = arg1 * arg2  -- defining a function
-main = print(mul 2 3)
+-- use recursion to "re-bind" argument symbols in new scope
+factorial n = if n > 1
+            then n * factorial(n-1)
+            else 1
+main = print (factorial 3)
+
+-- each recursive call requires its own stack frame
