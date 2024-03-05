@@ -7,3 +7,6 @@ encode shift msg =
     in  map chr shifted
 
 -- encodes a string by shifting it 'shift' times in the unicode table
+
+decode :: Int -> String -> String
+decode shift = encode (negate shift) 
